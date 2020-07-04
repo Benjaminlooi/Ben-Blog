@@ -12,7 +12,7 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       header = (
         <div>
-          <a href="https://benjaminlooi.github.io"><p>Back to website</p></a>
+          <a href="https://benjaminlooi.netlify.app"><p>Back to website</p></a>
           <h1
             style={{
               ...scale(1.5),
