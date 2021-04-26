@@ -8,9 +8,14 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      <>
+        <a href="https://benjaminlooi.dev">
+          <p>Back to my website</p>
+        </a>
+        <h1 className="main-heading">
+          <Link to="/">{title}</Link>
+        </h1>
+      </>
     )
   } else {
     header = (
@@ -22,9 +27,6 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <a href="https://benjaminlooi.dev">
-        <p>Back to my website</p>
-      </a>
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
