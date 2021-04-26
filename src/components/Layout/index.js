@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import * as styles from "./layout.module.scss"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -9,7 +10,7 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <>
-        <a href="https://benjaminlooi.dev">
+        <a href="https://benjaminlooi.dev" className={styles.backToWebsite}>
           <p>Back to my website</p>
         </a>
         <h1 className="main-heading">
