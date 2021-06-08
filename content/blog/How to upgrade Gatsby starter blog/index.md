@@ -1,6 +1,6 @@
 ---
 title: How to upgrade Gatsby starter blog (or any other gatsby starter template)
-date: "2020-04-26"
+date: "2021-04-26"
 description: "This article describes how to upgrade Gatsby starter blog (or any other gatsby starter template)"
 ---
 

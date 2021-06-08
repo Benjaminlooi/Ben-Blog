@@ -1,6 +1,6 @@
 ---
 title: Google fonts not loaded in generated static Nuxt app
-date: "2020-05-16"
+date: "2021-05-16"
 description: ""
 ---
 
