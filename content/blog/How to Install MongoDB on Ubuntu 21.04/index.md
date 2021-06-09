@@ -1,5 +1,5 @@
 ---
-title: Google fonts not loaded in generated static Nuxt app
+title: How to Install MongoDB on Ubuntu 21.04
 date: "2021-06-09"
 description: ""
 ---
