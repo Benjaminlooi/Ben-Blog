@@ -5,7 +5,7 @@ module.exports = {
       name: `Benjamin Looi`,
       summary: `who is based in Kuala Lumpur and loves building useful web applications`,
     },
-    description: `I'm a web developer and mostly does modern front-end stuffs with technologies including buy not limited to ReactJs, VueJs and NodeJs`,
+    description: `I'm a web developer and mostly does modern front-end stuffs with technologies including buy not limited to ReactJs, VueJs and NodeJs. This is my fabulous blog.`,
     siteUrl: `https://blog.benjaminlooi.dev`,
     social: {
       twitter: `Benjaminlooi_`,
