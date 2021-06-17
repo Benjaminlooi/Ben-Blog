@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ben's Blog`,
+    title: `Benjamin Looi's Blog`,
     author: {
       name: `Benjamin Looi`,
       summary: `who is based in Kuala Lumpur and loves building useful web applications`,
@@ -112,8 +112,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Benjamin Looi's Blog`,
+        short_name: `Ben's Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
