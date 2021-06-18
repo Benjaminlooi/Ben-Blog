@@ -37,6 +37,11 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.28.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-webpack-plugin": "^2.5.4",
+    "gatsby-plugin-eslint": "^3.0.0",
     "prettier": "2.2.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
