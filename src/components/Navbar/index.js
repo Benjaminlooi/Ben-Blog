@@ -3,6 +3,7 @@ import gsap from "gsap"
 import React, { useEffect, useRef, useState } from "react"
 import clsx from "clsx"
 import * as style from "./navbar.module.scss"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Navbar() {
   const [mobileMenuIsActive, setMobileMenuIsActive] = useState(false)
@@ -88,9 +89,19 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
+            <div className="flex-1 flex items-center justify-center sm:justify-between">
               <div className="flex-shrink-0 flex items-center">
-                <h1 className="color-coolGray text-lg">Benjamin</h1>
+                <StaticImage
+                  className="mr-1"
+                  layout="fixed"
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                  src="../../images/ben_bighead.png"
+                  width={50}
+                  height={50}
+                  quality={95}
+                  alt="Benjamin Looi logo"
+                />
+                <h1 className="color-coolGray text-lg">Benjamin Looi</h1>
               </div>
 
               <div className="hidden sm:block sm:ml-6">
