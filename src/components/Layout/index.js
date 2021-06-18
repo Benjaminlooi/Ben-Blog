@@ -28,12 +28,14 @@ const Layout = ({ location, title, children }) => {
     <>
       <Navbar />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
-        <header className="global-header">{header}</header>
+        <header className="global-header text-indigo-600">{header}</header>
         <main>{children}</main>
-        <footer>
+        <footer className="py-6">
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com" className="normal-link">
+            Gatsby
+          </a>
         </footer>
       </div>
     </>
