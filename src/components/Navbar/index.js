@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import gsap from "gsap"
 import React, { useEffect, useRef, useState } from "react"
+import clsx from "clsx"
+import * as style from "./navbar.module.scss"
 
 export default function Navbar() {
   const [mobileMenuIsActive, setMobileMenuIsActive] = useState(false)
@@ -11,19 +13,16 @@ export default function Navbar() {
   useEffect(() => {
     tl.current
       .addLabel("start")
-      .fromTo(
-        mobileMenuRef.current,
-        {
-          opacity: 0,
-          height: 0,
-        },
-        {
-          opacity: 1,
-          height: "auto",
-          duration: 0.2,
-          ease: "power2.inOut",
-        }
-      )
+      .from(mobileMenuRef.current, {
+        opacity: 0,
+        height: 0,
+      })
+      .to(mobileMenuRef.current, {
+        opacity: 1,
+        height: "auto",
+        duration: 0.2,
+        ease: "power2.inOut",
+      })
       .addLabel("end")
       .reverse()
   }, [])
@@ -130,7 +129,10 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div ref={mobileMenuRef} id="mobile-menu" className="sm:hidden">
+        <div
+          ref={mobileMenuRef}
+          className={clsx("sm:hidden", [style.mobileMenu])}
+        >
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="https://benjaminlooi.dev"
