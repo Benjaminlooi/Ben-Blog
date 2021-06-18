@@ -136,6 +136,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-eslint`,
     `gatsby-plugin-fontawesome-css`,
   ],
 }

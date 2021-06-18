@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Navbar from "../Navbar"
 
 const Layout = ({ location, title, children }) => {
+  // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
