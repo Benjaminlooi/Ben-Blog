@@ -1,0 +1,44 @@
+.social-icons-row {
+  display: flex;
+  align-items: center;
+}
+
+.facebook-icon {
+  color: #2196f3;
+
+  &:hover {
+    color: rgb(20 114 172);
+  }
+}
+
+.instagram-icon {
+  color: #607d8b;
+
+  &:hover {
+    color: #2f3e45;
+  }
+}
+
+.github-icon {
+  color: #673ab7;
+
+  &:hover {
+    color: #4f2b8d;
+  }
+}
+
+.twitter-icon {
+  color: #1da1f2;
+
+  &:hover {
+    color: #1878b2;
+  }
+}
+
+.linkedin-icon {
+  color: #0e76a8;
+
+  &:hover {
+    color: #08435f;
+  }
+}

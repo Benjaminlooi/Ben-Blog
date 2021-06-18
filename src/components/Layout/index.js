@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Navbar from "../Navbar"
+import Footer from "../Footer"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons"
 
@@ -33,14 +34,8 @@ const Layout = ({ location, title, children }) => {
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <header className="global-header text-indigo-600">{header}</header>
         <main>{children}</main>
-        <footer className="py-6">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com" className="normal-link">
-            Gatsby
-          </a>
-        </footer>
       </div>
+      <Footer />
     </>
   )
 }
