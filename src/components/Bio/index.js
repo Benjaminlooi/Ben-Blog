@@ -14,7 +14,6 @@ import BackToHome from "../BackToHome"
 
 const Bio = props => {
   const { showBackToHome } = props
-  console.log("🚀 ~ file: index.js ~ line 15 ~ showBackToHome", showBackToHome)
 
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -29,10 +28,6 @@ const Bio = props => {
       }
     }
   `)
-
-  // // eslint-disable-next-line no-undef
-  // const rootPath = `${__PATH_PREFIX__}/`
-  // const isRootPath = location.pathname === rootPath
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
@@ -65,9 +60,11 @@ const Bio = props => {
         )}
       </div>
 
-      <div className="pt-4">
-        <BackToHome title={siteTitle} />
-      </div>
+      {showBackToHome && (
+        <div className="pt-4">
+          <BackToHome title={siteTitle} />
+        </div>
+      )}
     </div>
   )
 }
