@@ -1,8 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import * as styles from "./layout.module.scss"
+import Navbar from "../Navbar"
 
 const Layout = ({ location, title, children }) => {
+  // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -10,10 +11,7 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <>
-        <a href="https://benjaminlooi.dev" className={styles.backToWebsite}>
-          <p>Back to my website</p>
-        </a>
-        <h1 className="main-heading">
+        <h1 className="main-heading font-bold">
           <Link to="/">{title}</Link>
         </h1>
       </>
@@ -27,15 +25,20 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
-    </div>
+    <>
+      <Navbar />
+      <div className="global-wrapper" data-is-root-path={isRootPath}>
+        <header className="global-header text-indigo-600">{header}</header>
+        <main>{children}</main>
+        <footer className="py-6">
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com" className="normal-link">
+            Gatsby
+          </a>
+        </footer>
+      </div>
+    </>
   )
 }
 
