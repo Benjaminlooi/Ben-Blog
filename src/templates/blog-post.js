@@ -35,7 +35,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <hr />
 
         <footer className="py-6">
-          <Bio />
+          <Bio showBackToHome />
         </footer>
       </article>
 

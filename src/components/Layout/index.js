@@ -2,8 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Navbar from "../Navbar"
 import Footer from "../Footer"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons"
+import BackToHome from "../BackToHome"
 
 const Layout = ({ location, title, children }) => {
   // eslint-disable-next-line no-undef
@@ -20,12 +19,7 @@ const Layout = ({ location, title, children }) => {
       </>
     )
   } else {
-    header = (
-      <Link className="text-sm font-bold" to="/">
-        <FontAwesomeIcon icon={faArrowAltCircleLeft} className="mr-1" />
-        Back to {title} home
-      </Link>
-    )
+    header = <BackToHome title={title} />
   }
 
   return (

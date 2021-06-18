@@ -9,12 +9,18 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import SocialIcons from "../SocialIcons"
+import * as style from "./bio.module.scss"
+import BackToHome from "../BackToHome"
 
-const Bio = () => {
+const Bio = props => {
+  const { showBackToHome } = props
+  console.log("🚀 ~ file: index.js ~ line 15 ~ showBackToHome", showBackToHome)
+
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
         siteMetadata {
+          title
           author {
             name
             summary
@@ -24,32 +30,44 @@ const Bio = () => {
     }
   `)
 
+  // // eslint-disable-next-line no-undef
+  // const rootPath = `${__PATH_PREFIX__}/`
+  // const isRootPath = location.pathname === rootPath
+
   // Set these values by editing "siteMetadata" in gatsby-config.js
   const author = data.site.siteMetadata?.author
+  const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <div className="bio">
-      <StaticImage
-        className="bio-avatar"
-        layout="fixed"
-        formats={["AUTO", "WEBP", "AVIF"]}
-        src="../../images/ben_bighead.png"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Benjamin Looi profile picture"
-      />
-      {author?.name && (
-        <div>
-          <p>
-            Written by <strong>{author.name}</strong> {author?.summary || null}
-          </p>
+    <div className="mb-12">
+      <div className="flex">
+        <StaticImage
+          className={style.bioAvatar}
+          layout="fixed"
+          formats={["AUTO", "WEBP", "AVIF"]}
+          src="../../images/ben_bighead.png"
+          width={50}
+          height={50}
+          quality={95}
+          alt="Benjamin Looi profile picture"
+        />
+        {author?.name && (
+          <div>
+            <p>
+              Written by <strong>{author.name}</strong>{" "}
+              {author?.summary || null}
+            </p>
 
-          <div style={{ marginLeft: "-0.5rem" }}>
-            <SocialIcons />
+            <div style={{ marginLeft: "-0.5rem" }}>
+              <SocialIcons />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
+
+      <div className="pt-4">
+        <BackToHome title={siteTitle} />
+      </div>
     </div>
   )
 }
