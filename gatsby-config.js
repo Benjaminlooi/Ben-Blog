@@ -144,7 +144,7 @@ module.exports = {
         google: {
           families: [
             "Roboto:300,400,700",
-            "Montserrat:400,600,700",
+            "Montserrat:400,600,700,800,900",
             "Nunito:400,600,700",
           ],
         },

@@ -1,5 +1,4 @@
 /* CSS Custom Properties Definitions */
-
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
@@ -73,4 +72,15 @@
 
 .prose > :last-child {
   @apply mb-8;
+}
+
+.prose {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-header;
+  }
 }
