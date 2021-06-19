@@ -142,7 +142,11 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Roboto", "Montserrat", "Nunito"],
+          families: [
+            "Roboto:300,400,700",
+            "Montserrat:400,600,700",
+            "Nunito:400,600,700",
+          ],
         },
       },
     },
