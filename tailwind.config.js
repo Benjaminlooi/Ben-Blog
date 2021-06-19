@@ -4,7 +4,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Merriweather", "serif"],
         sans: ["Roboto", "sans-serif"],
         header: ["Montserrat", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
