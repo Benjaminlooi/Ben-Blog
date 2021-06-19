@@ -2,7 +2,14 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ["Merriweather", "serif"],
+        sans: ["Roboto", "sans-serif"],
+        header: ["Montserrat", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
+      },
+    },
   },
   variants: {
     extend: {

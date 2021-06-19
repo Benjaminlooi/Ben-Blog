@@ -13,7 +13,7 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-header">
           <Link to="/">{title}</Link>
         </h1>
       </>
@@ -26,7 +26,7 @@ const Layout = ({ location, title, children }) => {
     <>
       <Navbar />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
-        <header className="global-header text-indigo-600">{header}</header>
+        <header className="mb-12 text-indigo-600">{header}</header>
         <main>{children}</main>
       </div>
       <Footer />

@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white">
+      <nav className="bg-white font-nunito">
         <div className="mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -108,29 +108,29 @@ export default function Navbar() {
                 <div className="flex space-x-4">
                   <a
                     href="https://benjaminlooi.dev/"
-                    className="text-gray-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold"
                   >
                     Home
                   </a>
 
                   <a
                     href="https://benjaminlooi.dev/projects"
-                    className="text-gray-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold"
                   >
                     Projects
                   </a>
 
                   <a
                     href="https://benjaminlooi.dev/resume"
-                    className="text-gray-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-semibold"
                   >
                     Resume
                   </a>
 
                   <Link
                     to="/"
-                    className="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    activeClassName="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold"
+                    activeClassName="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-bold"
                   >
                     Blog
                   </Link>
@@ -147,29 +147,29 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="https://benjaminlooi.dev"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
             >
               Home
             </a>
 
             <a
               href="https://benjaminlooi.dev/projects"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
             >
               Projects
             </a>
 
             <a
               href="https://benjaminlooi.dev/resume"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-gray-400 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
             >
               Resume
             </a>
 
             <Link
               to="/"
-              activeClassName="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              className="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              activeClassName="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-bold"
+              className="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-bold"
               onClick={closeMobileMenu}
             >
               Blog

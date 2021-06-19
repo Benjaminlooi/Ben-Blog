@@ -138,5 +138,13 @@ module.exports = {
     },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Merriweather", "Roboto", "Montserrat", "Nunito"],
+        },
+      },
+    },
   ],
 }

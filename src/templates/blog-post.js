@@ -16,16 +16,20 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+
       <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header className="mb-10">
-          <h1 itemProp="headline" className="text-3xl font-bold">
+          <h1
+            itemProp="headline"
+            className="text-3xl font-bold font-header mb-4"
+          >
             {post.frontmatter.title}
           </h1>
-          <p className="font-light">{post.frontmatter.date}</p>
+          <p className="font-light text-xl">{post.frontmatter.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -34,9 +38,9 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
 
-        <footer className="py-6">
+        <div className="py-6">
           <Bio showBackToHome />
-        </footer>
+        </div>
       </article>
 
       <nav className="blog-post-nav">
