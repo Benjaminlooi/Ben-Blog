@@ -14,34 +14,31 @@ export default function Navbar() {
   useEffect(() => {
     tl.current
       .addLabel("start")
-      .from(mobileMenuRef.current, {
-        opacity: 0,
-        height: 0,
-      })
-      .to(mobileMenuRef.current, {
-        opacity: 1,
-        height: "auto",
-        duration: 0.2,
-        ease: "power2.inOut",
-      })
+      .fromTo(
+        mobileMenuRef.current,
+        {
+          opacity: 0,
+          height: 0,
+        },
+        {
+          opacity: 1,
+          height: "auto",
+          duration: 0.2,
+          ease: "power2.inOut",
+        }
+      )
       .addLabel("end")
       .reverse()
   }, [])
 
-  const toggleMobileNavBar = () => {
-    if (!mobileMenuIsActive) {
-      setMobileMenuIsActive(true)
-      tl.current.play()
-    } else {
-      setMobileMenuIsActive(false)
-      tl.current.reversed(true)
-    }
-  }
+  useEffect(() => {
+    tl.current.reversed(!mobileMenuIsActive)
+  }, [mobileMenuIsActive])
 
-  const closeMobileMenu = () => {
-    setMobileMenuIsActive(false)
-    tl.current.reverse()
-  }
+  const toggleMobileNavBar = () =>
+    mobileMenuIsActive
+      ? setMobileMenuIsActive(false)
+      : setMobileMenuIsActive(true)
 
   return (
     <>
@@ -170,7 +167,7 @@ export default function Navbar() {
               to="/"
               activeClassName="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-bold"
               className="text-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-bold"
-              onClick={closeMobileMenu}
+              onClick={() => setMobileMenuIsActive(false)}
             >
               Blog
             </Link>
