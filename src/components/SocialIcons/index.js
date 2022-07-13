@@ -1,5 +1,4 @@
 import {
-  faFacebookSquare,
   faGithub,
   faInstagram,
   faLinkedinIn,
@@ -14,17 +13,6 @@ export default function SocialIcons() {
     <ul className={style.socialIconsRow}>
       <a
         className="p-2 fa-lg"
-        href="https://www.facebook.com/benjaminlooi97"
-        aria-label="Benjamin Looi's Facebook"
-      >
-        <FontAwesomeIcon
-          icon={faFacebookSquare}
-          className={style.facebookIcon}
-        />
-      </a>
-
-      <a
-        className="p-2 fa-lg"
         href="https://www.instagram.com/benjaminlooi/"
         aria-label="Benjamin Looi's Instagram"
       >
@@ -33,18 +21,18 @@ export default function SocialIcons() {
 
       <a
         className="p-2 fa-lg"
-        href="https://github.com/Benjaminlooi"
-        aria-label="Benjamin Looi's Github"
-      >
-        <FontAwesomeIcon icon={faGithub} className={style.githubIcon} />
-      </a>
-
-      <a
-        className="p-2 fa-lg"
         href="https://twitter.com/benjaminlooi_"
         aria-label="Benjamin Looi's Twitter"
       >
         <FontAwesomeIcon icon={faTwitter} className={style.twitterIcon} />
+      </a>
+
+      <a
+        className="p-2 fa-lg"
+        href="https://github.com/Benjaminlooi"
+        aria-label="Benjamin Looi's Github"
+      >
+        <FontAwesomeIcon icon={faGithub} className={style.githubIcon} />
       </a>
 
       <a
