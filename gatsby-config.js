@@ -105,6 +105,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
+            title: `Benjamin Looi's Blog RSS Feed`,
           },
         ],
       },
@@ -137,7 +138,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-eslint`,
-    `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-fontawesome`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
