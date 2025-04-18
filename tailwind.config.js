@@ -1,6 +1,6 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],  // "content" replaces "purge" in v3
+  darkMode: 'media', // or 'class' if you want toggle-based dark mode
   theme: {
     extend: {
       fontFamily: {
@@ -10,10 +10,7 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {
-      textColor: ["visited"],
-    },
-  },
   plugins: [require("@tailwindcss/typography")],
+  // "variants" is no longer needed in Tailwind v3
+  // as all variants are included by default
 }
