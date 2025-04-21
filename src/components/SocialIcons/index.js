@@ -1,17 +1,18 @@
 import {
   faGithub,
-  faInstagram,
+  // faInstagram,
   faLinkedinIn,
-  faTwitter,
+  // faTwitter,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 import * as style from "./socialIcons.module.scss"
+import { faGlobe } from "@fortawesome/free-solid-svg-icons"
 
 export default function SocialIcons() {
   return (
     <ul className={style.socialIconsRow}>
-      <a
+      {/* <a
         className="p-2 fa-lg"
         href="https://www.instagram.com/benjaminlooi/"
         aria-label="Benjamin Looi's Instagram"
@@ -25,6 +26,14 @@ export default function SocialIcons() {
         aria-label="Benjamin Looi's Twitter"
       >
         <FontAwesomeIcon icon={faTwitter} className={style.twitterIcon} />
+      </a> */}
+
+      <a
+        className="p-2 fa-lg"
+        href="https://benjaminlooi.com"
+        aria-label="Benjamin Looi's Website"
+      >
+        <FontAwesomeIcon icon={faGlobe} className={style.websiteIcon} />
       </a>
 
       <a
