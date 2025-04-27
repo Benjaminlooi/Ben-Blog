@@ -25,7 +25,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <>
       <Navbar />
-      <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <div className="container mx-auto px-5 pt-12 pb-10" data-is-root-path={isRootPath}>
         <header className="mb-12 text-indigo-600">{header}</header>
         <main>{children}</main>
       </div>
